@@ -46,7 +46,7 @@ cuda = True if torch.cuda.is_available() else False
 os.makedirs("saved_models/%s" % opt.model_name, exist_ok=True)
 
 # finds all possible transfer pairings without repetition (each will be used for a forward and backward pass)
-transfer_combos = list(itertools.combinations(range(0, 2), 2))
+transfer_combos = list(itertools.combinations(range(0, opt.n_spkrs), 2))
 
 # Create plot output directories
 if opt.plot_interval != -1:
