@@ -229,9 +229,9 @@ def train_local(i, epoch, batch, id_1, id_2, losses):
         # --------------
         
         # Plot first batch every epoch or few epochs
-        if opt.plot_interval != -1 and (epoch+1) % opt.plot_interval == 0 and i == 0:
-            plot_batch_train(opt.model_name, 'plot_%dt%d'%(id_1, id_2), epoch, X1, cycle_X1, fake_X2, X2)
-            plot_batch_train(opt.model_name, 'plot_%dt%d'%(id_2, id_1), epoch, X2, cycle_X2, fake_X1, X1)
+        #if opt.plot_interval != -1 and (epoch+1) % opt.plot_interval == 0 and i == 0:
+            #plot_batch_train(opt.model_name, 'plot_%dt%d'%(id_1, id_2), epoch, X1, cycle_X1, fake_X2, X2)
+            #plot_batch_train(opt.model_name, 'plot_%dt%d'%(id_2, id_1), epoch, X2, cycle_X2, fake_X1, X1)
 
         losses['G'].append(loss_G.item())
         losses['D'].append((loss_D1 + loss_D2).item())
